@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifique sua idade para votação</title>
+    <link rel="stylesheet" href="eleitores.css"> <!-- Link para o CSS atualizado -->
+</head>
+<body>
+    <div class="container"> <!-- Contêiner único para todos os elementos -->
+        <h1><b>SERÁ QUE VOCÊ JÁ PODE VOTAR?</b></h1>
+        <h2>Verifique sua Idade para Votação!</h2>
+        <img src="urna.png" alt="Urna Eletrônica" class="urna-img">
+        <button onclick="eleitor()">Verificar Idade</button> <!-- Botão dentro do contêiner -->
+    </div>
+
+    <script>
+        function eleitor() {
+            const nome = prompt("Insira o seu nome");
+            const idade = Number(prompt("Insira a sua idade"));
+
+            if (idade >= 16 && idade < 18) {
+                alert("Olá, " + nome + ", de acordo com a legislação brasileira, você já possui idade mínima para exercer sua cidadania e votar. Vamos tirar o seu título de eleitor?");
+            } else if (idade >= 18) {
+                alert("Olá, " + nome + ", de acordo com a legislação brasileira, você já atingiu a idade para obrigatoriedade do voto. Será necessário criar um título de eleitor. Vamos lá?");
+            } else {
+                alert("Olá, " + nome + ", que pena! Você ainda não atingiu a idade mínima para votar.");
+            }
+        }
+    </script>
+</body>
+</html>
